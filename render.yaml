@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: mrperfectv5-ui
+    env: python
+    repo: REPLACE_WITH_YOUR_REPO_URL
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn ui.app:app --bind 0.0.0.0:$PORT
+  - type: worker
+    name: mrperfectv5-worker
+    env: python
+    repo: REPLACE_WITH_YOUR_REPO_URL
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: python ui/fetcher_ui_bridge.py

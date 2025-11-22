@@ -1,0 +1,14 @@
+asyncio
+calibrate_patterns
+collections
+database_handler
+flask
+gunicorn
+itertools
+math_core
+multi_step
+prediction_engine
+q_learning_strategy
+random
+requests
+statistics
